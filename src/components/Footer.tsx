@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
             <div className="container mx-auto text-center">
                 <p>© 2024 Eugenia's Gym Courses. All Rights Reserved.</p>
                 <p>Contact: <a href="tel:+1234567890" className="text-highlight">+1234567890</a></p>
-                <p>WhatsApp: <a href="https://wa.me/1234567890" className="text-highlight">Chat on WhatsApp</a></p>
+                <p>WhatsApp: <a href="https://wa.me/1234567890" className="text-highlight">Escribeme a WhatsApp</a></p>
             </div>
         </footer>
     );
