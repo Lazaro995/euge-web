@@ -21,6 +21,7 @@ const Carousel: React.FC = () => {
       navigation
       pagination={{ clickable: true }}
       autoplay={{ delay: 3000 }}
+      loop = {true}
       className="mt-4"
     >
       {images.map((image, index) => (
