@@ -10,7 +10,11 @@ const YouTubePlayer: React.FC<{ videoId: string }> = ({ videoId }) => {
     },
   };
 
-  return <YouTube videoId={videoId} opts={opts} />;
+  return (
+    <div className="shadow-lg rounded-lg overflow-hidden mb-4">
+      <YouTube videoId={videoId} opts={opts} />
+    </div>
+  );
 };
 
 export default YouTubePlayer;
