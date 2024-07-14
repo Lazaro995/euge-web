@@ -1,6 +1,7 @@
 import React from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { motion } from 'framer-motion';
 
 const ContactForm: React.FC = () => {
     return (
@@ -24,7 +25,13 @@ const ContactForm: React.FC = () => {
                 }, 400);
             }}
         >
-            <Form className="bg-secondary bg-opacity-75 p-6 rounded-lg shadow-lg">
+            <motion.form
+                className="bg-secondary bg-opacity-75 p-6 rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+            >
                 <div className="mb-4">
                     <label htmlFor="name" className="block text-highlight mb-2">Name</label>
                     <Field name="name" type="text" className="w-full p-2 rounded bg-white text-secondary" />
@@ -41,7 +48,7 @@ const ContactForm: React.FC = () => {
                     <ErrorMessage name="message" component="div" className="text-red-500 mt-1" />
                 </div>
                 <button type="submit" className="bg-primary text-secondary p-2 rounded hover:bg-highlight transition duration-200">Submit</button>
-            </Form>
+            </motion.form>
         </Formik>
     );
 };

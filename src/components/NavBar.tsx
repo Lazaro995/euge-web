@@ -1,9 +1,14 @@
 import React from 'react';
 import { FaHome, FaInfoCircle, FaPhone } from 'react-icons/fa';
-
+import { motion } from 'framer-motion'
 const Navbar: React.FC = () => {
     return (
-        <nav className="bg-secondary bg-opacity-75 text-white p-4 fixed w-full z-10 shadow-md">
+        <motion.nav
+            className='bg-secondary bg-opacity-75 text-white p-4 fixed w-full z-10 shadow-md'
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className="container mx-auto flex justify-between items-center">
                 <div className="flex items-center space-x-2 text-lg font-bold text-highlight">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-6 h-6">
@@ -17,7 +22,7 @@ const Navbar: React.FC = () => {
                     <a href="#contact" className="flex items-center space-x-1 hover:text-highlight transition duration-200"><FaPhone /><span>Contact</span></a>
                 </div>
             </div>
-        </nav>
+        </motion.nav>
     );
 };
 
