@@ -41,8 +41,10 @@ const Header: React.FC = () => {
 
     return (
         <motion.nav
-            className="bg-primary bg-opacity-nav-bg-opacity text-secondary p-4 fixed top-4 left-0 right-0 mx-auto max-w-screen-2xl z-10 rounded-full"
-            style={{ boxShadow: "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px" }}
+            className="bg-navBg text-navText p-4 fixed top-4 left-0 right-0 mx-auto max-w-screen-2xl z-10 rounded-full"
+            style={{
+                boxShadow: "var(--shadow-color1) 0px -23px 25px 0px inset, var(--shadow-color2) 0px -36px 30px 0px inset, var(--shadow-color3) 0px -79px 40px 0px inset, var(--shadow-color4) 0px 2px 1px, var(--shadow-color5) 0px 4px 2px, var(--shadow-color5) 0px 8px 4px, var(--shadow-color5) 0px 16px 8px, var(--shadow-color5) 0px 32px 16px"
+            }}
             variants={parentVariants}
             animate={hidden ? "hidden" : "visible"}
             transition={{
