@@ -3,14 +3,13 @@
 @tailwind utilities;
 
 :root {
-    --primary-color: #d4af37;
-    /* Color amarillo neón */
-    --secondary-color: #000000;
-    /* Color negro */
-    --text-color: #ffffff;
-    /* Color blanco */
-    --highlight-color: #d4af37;
-    /* Color de acento amarillo neón */
+    --primary-color: #000000; /* Fondo negro */
+    --secondary-color: #1a202c; /* Gris oscuro */
+    --text-color: #a8ff0a; /* Verde brillante */
+    --highlight-color: #a8ff0a; /* Acento verde */
+    --button-gradient-start: #a8ff0a; /* Gradiente de botón verde */
+    --button-gradient-end: #a8ff0a; /* Gradiente de botón verde */
+    --nav-bg-opacity: 0.95; /* Opacidad del fondo del navbar */
 }
 
 .bg-primary {
@@ -30,7 +29,7 @@
 }
 
 .text-white {
-    color: var(--text-color);
+    color: #FFFFFF;
 }
 
 .text-highlight {

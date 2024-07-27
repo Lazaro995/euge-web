@@ -5,9 +5,9 @@ import { Outlet } from 'react-router-dom';
 
 const Layout: React.FC = () => {
     return (
-        <div className="bg-secondary text-white min-h-screen flex flex-col">
+        <div className="bg-primary text-white min-h-screen flex flex-col">
             <Header />
-            <main className="flex-grow pt-16"> {/* Ajustar para dar espacio al header fijo */}
+            <main className="flex-grow pt-16 mx-auto max-w-screen-2xl px-4"> {/* Ajustar para dar espacio al header fijo */}
                 <Outlet />
             </main>
             <Footer />

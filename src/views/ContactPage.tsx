@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm';
 
 const ContactPage: React.FC = () => (
     <section id="contact" className="py-10">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
             <motion.h2
                 className="text-2xl font-bold text-highlight mb-4"
                 initial={{ opacity: 0, y: 100 }}

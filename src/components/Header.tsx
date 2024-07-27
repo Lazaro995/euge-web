@@ -2,7 +2,14 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 
-const linkList: string[] = ["Home", "About", "Contact"];
+// const linkList: string[] = ["Home", "About", "Contact"]; Lo vamos a cambiar
+
+const linkList: Array<{name: string; path: string}> = [
+
+{name: "Home", path: "/"},
+{name: "About", path: "/About"},
+{name: "Contact", path: "/Contact"}
+]
 
 const parentVariants = {
     visible: { opacity: 1, y: 0 },
@@ -34,7 +41,8 @@ const Header: React.FC = () => {
 
     return (
         <motion.nav
-            className="bg-secondary bg-opacity-75 text-white p-4 fixed w-full z-10 shadow-md"
+    className="bg-primary bg-opacity-nav-bg-opacity text-secondary p-4 fixed top-4 left-0 right-0 mx-auto max-w-screen-2xl z-10 rounded-full"
+            style={{ boxShadow: "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px" }}
             variants={parentVariants}
             animate={hidden ? "hidden" : "visible"}
             transition={{
@@ -48,7 +56,7 @@ const Header: React.FC = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-6 h-6">
                         <path fillRule="evenodd" d="M9.58 1.077a.75.75 0 0 1 .405.82L9.165 6h4.085a.75.75 0 0 1 .567 1.241l-6.5 7.5a.75.75 0 0 1-1.302-.638L6.835 10H2.75a.75.75 0 0 1-.567-1.241l6.5-7.5a.75.75 0 0 1 .897-.182Z" clipRule="evenodd" />
                     </svg>
-                    <span className='uppercase'>power fit mdp</span>
+                    <span className='uppercase text-highlight'>power fit mdp</span>
                 </div>
                 <div className="flex space-x-8">
                     {linkList.map((link, index) => (
@@ -61,17 +69,17 @@ const Header: React.FC = () => {
                             }}
                         >
                             <NavLink
-                                to={`/${link.toLowerCase()}`}
+                                to={link.path}
                                 className={({ isActive }) =>
-                                    `hover:text-highlight transition duration-200 ${isActive ? 'text-highlight' : ''}`
+                                    `hover:text-highlight transition duration-200 ${isActive ? 'text-highlight' : 'text-white'}`
                                 }
                             >
-                                {link}
+                                {link.name}
                             </NavLink>
                         </motion.div>
                     ))}
                 </div>
-                <button className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-4 py-2 rounded-full">
+                <button className="button-gradient text-primary px-4 py-2 rounded-full shadow-lg">
                     Login
                 </button>
             </div>
