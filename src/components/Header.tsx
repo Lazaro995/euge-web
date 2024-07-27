@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 
-const linkList: string[] = ["home", "About", "Contact"];
+const linkList: string[] = ["Home", "About", "Contact"];
 
 const parentVariants = {
     visible: { opacity: 1, y: 0 },

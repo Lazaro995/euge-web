@@ -12,7 +12,8 @@ const AppRouter: React.FC = () => {
             <Routes>
                 <Route element={<Layout />}>
                     {/*  HACER EL LAYOUT */}
-                    <Route path="/home" element={<IndexPage />} />
+                    <Route path="/Home" element={<IndexPage />} />
+                    <Route path="/" element={<IndexPage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                 </Route>
