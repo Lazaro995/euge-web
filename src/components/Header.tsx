@@ -54,12 +54,12 @@ const Header: React.FC = () => {
             }}
         >
             <div className="container mx-auto flex justify-between items-center">
-                <div className="flex items-center space-x-2 text-lg font-bold text-highlight">
+            <NavLink to="/" className="flex items-center space-x-2 text-lg font-bold text-highlight">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-6 h-6">
                         <path fillRule="evenodd" d="M9.58 1.077a.75.75 0 0 1 .405.82L9.165 6h4.085a.75.75 0 0 1 .567 1.241l-6.5 7.5a.75.75 0 0 1-1.302-.638L6.835 10H2.75a.75.75 0 0 1-.567-1.241l6.5-7.5a.75.75 0 0 1 .897-.182Z" clipRule="evenodd" />
                     </svg>
                     <span className='uppercase text-highlight'>power fit mdp</span>
-                </div>
+                </NavLink>
                 <div className="flex space-x-8">
                     {linkList.map((link, index) => (
                         <motion.div

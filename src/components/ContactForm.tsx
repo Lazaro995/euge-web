@@ -26,7 +26,7 @@ const ContactForm: React.FC = () => {
             }}
         >
             <motion.form
-                className="bg-secondary bg-opacity-75 p-8 rounded-lg shadow-lg w-full max-w-lg mx-auto"
+                className="bg-slate-900 bg-opacity-75 p-8 rounded-lg shadow-lg w-full max-w-2xl ! mx-auto"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
