@@ -9,7 +9,8 @@ const cardImages = [
         description: 'Feel the power in your hands.',
         bgColor: 'bg-purple-100',
         titleColor: 'text-black',
-        descriptionColor: 'text-gray-600'
+        descriptionColor: 'text-gray-600',
+        yPos: 0
     },
     {
         imageUrl: getImageUrl('bg-card.png'),
@@ -17,7 +18,8 @@ const cardImages = [
         description: 'Romanian deadlift and other exercises.',
         bgColor: 'bg-pink-100',
         titleColor: 'text-white',
-        descriptionColor: 'text-gray-700'
+        descriptionColor: 'text-gray-700',
+        yPos: 150
     },
     {
         imageUrl: getImageUrl('bg-card.png'),
@@ -25,7 +27,8 @@ const cardImages = [
         description: 'Find the best workout plans for you.',
         bgColor: 'bg-green-100',
         titleColor: 'text-gray-800',
-        descriptionColor: 'text-gray-800'
+        descriptionColor: 'text-gray-800',
+        yPos: 300
     }
 ];
 
@@ -43,6 +46,7 @@ const GetStartedPage: React.FC = () => (
                         bgColor={card.bgColor}
                         titleColor={card.titleColor}
                         descriptionColor={card.descriptionColor}
+                        yPos={card.yPos}
                     />
                 ))}
             </div>
