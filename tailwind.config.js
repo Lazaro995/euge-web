@@ -25,6 +25,9 @@ export default {
         shadowColor3: 'rgba(168, 255, 10, 0.1)',  // Color de sombra 3
         shadowColor4: 'rgba(168, 255, 10, 0.06)', // Color de sombra 4
         shadowColor5: 'rgba(168, 255, 10, 0.09)', // Color de sombra 5
+        purpleLight: '#E9D5FF', // Color claro para fondo púrpura
+        pinkLight: '#FBCFE8', // Color claro para fondo rosado
+        greenLight: '#D1FAE5' // Color claro para fondo verde
       }
     },
   },

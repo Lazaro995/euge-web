@@ -7,7 +7,7 @@ const cardImages = [
         imageUrl: getImageUrl('bg-card.png'),
         title: 'Strong Grip',
         description: 'Feel the power in your hands.',
-        bgColor: 'bg-purple-100',
+        bgColor: 'bg-purpleLight',
         titleColor: 'text-black',
         descriptionColor: 'text-gray-600',
         yPos: 0
@@ -16,7 +16,7 @@ const cardImages = [
         imageUrl: getImageUrl('bg-card.png'),
         title: 'Exercise',
         description: 'Romanian deadlift and other exercises.',
-        bgColor: 'bg-pink-100',
+        bgColor: 'bg-pinkLight',
         titleColor: 'text-white',
         descriptionColor: 'text-gray-700',
         yPos: 150
@@ -25,7 +25,7 @@ const cardImages = [
         imageUrl: getImageUrl('bg-card.png'),
         title: 'Biggest training library',
         description: 'Find the best workout plans for you.',
-        bgColor: 'bg-green-100',
+        bgColor: 'bg-greenLight',
         titleColor: 'text-gray-800',
         descriptionColor: 'text-gray-800',
         yPos: 300
@@ -35,7 +35,7 @@ const cardImages = [
 const GetStartedPage: React.FC = () => (
     <section id="get-started" className="py-10 bg-gray-100">
         <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold text-center mb-8">Get Started</h2>
+            <h2 className="text-2xl text-black font-bold text-center mb-8">Get Started</h2>
             <div className="flex flex-col -space-y-6">
                 {cardImages.map((card, index) => (
                     <Card
