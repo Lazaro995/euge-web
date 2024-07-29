@@ -6,7 +6,7 @@ const cardImages = [
     {
         imageUrl: getImageUrl('bg-card.png'),
         title: 'Biceps',
-        description: '45 min',
+        description: 'Breve introducción al powerlifting y la importancia de los bíceps en el entrenamiento de fuerza Beneficios de entrenar los bíceps para mejorar el rendimiento en otros ejercicios compuestos.',
         bgColor: 'bg-purpleLight',
         titleColor: 'text-black',
         descriptionColor: 'text-gray-600',

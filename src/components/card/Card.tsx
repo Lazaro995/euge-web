@@ -58,9 +58,9 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, bgColor, titl
             >
                 <div  className="relative overflow-x-hidden ">
                     <img src={imageUrl} alt={title} className="w-full relative left-1/2 object-cover" />
-                    <div className="absolute top-4 left-4">
+                    <div className="absolute top-4 left-4 w-2/5">
                         <h2 className={`${titleColor} text-2xl font-semibold`}>{title}</h2>
-                        <p className={`${descriptionColor} opacity-75`}>{description}</p>
+                        <p className={`${descriptionColor} opacity-75 text-left`}>{description}</p>
                     </div>
                 </div>
                 <div className="p-4">
