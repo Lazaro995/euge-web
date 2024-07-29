@@ -5,8 +5,8 @@ import getImageUrl from '../utils/static';
 const cardImages = [
     {
         imageUrl: getImageUrl('bg-card.png'),
-        title: 'Strong Grip',
-        description: 'Feel the power in your hands.',
+        title: 'Biceps',
+        description: '45 min',
         bgColor: 'bg-purpleLight',
         titleColor: 'text-black',
         descriptionColor: 'text-gray-600',
@@ -14,21 +14,21 @@ const cardImages = [
     },
     {
         imageUrl: getImageUrl('bg-card.png'),
-        title: 'Exercise',
-        description: 'Romanian deadlift and other exercises.',
+        title: 'Triceps',
+        description: '30 min',
         bgColor: 'bg-pinkLight',
         titleColor: 'text-white',
         descriptionColor: 'text-gray-700',
-        yPos: 150
+        yPos: 0
     },
     {
         imageUrl: getImageUrl('bg-card.png'),
-        title: 'Biggest training library',
-        description: 'Find the best workout plans for you.',
+        title: 'Piernas',
+        description: '56 min',
         bgColor: 'bg-greenLight',
         titleColor: 'text-gray-800',
         descriptionColor: 'text-gray-800',
-        yPos: 300
+        yPos: 0
     }
 ];
 

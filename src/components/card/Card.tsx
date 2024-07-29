@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { ImCross } from 'react-icons/im';
-
+import React, { useState } from "react";
+import { ImCross } from "react-icons/im";
+import { motion, useAnimation } from "framer-motion";
+import   '../../index.css'
 interface CardProps {
     imageUrl: string;
     title: string;
@@ -17,7 +17,8 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, bgColor, titl
     const controls = useAnimation();
 
     const handleTap = () => {
-        state ? controls.start({ y: 0 }) : setState(!state);
+        setState(!state);
+        state ? controls.start({ y: 0 }) : controls.start({ y: 0 });
     };
 
     const variants = {
@@ -25,7 +26,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, bgColor, titl
             width: '100%',
             height: '90vh',
             borderRadius: 0,
-            overflow: "visible",
+            overflow: "hidden",
             left: '0%',
             y: 0,
             transition: { duration: 0.3, type: "spring", damping: 10, mass: 0.6 }
@@ -53,17 +54,16 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, bgColor, titl
             <motion.div
                 initial={{ height: '100%' }}
                 animate={controls}
-                className="overflow-y-scroll"
+                className="overflow-y-hidden"
             >
-                <div className="relative">
-                    <img src={imageUrl} alt={title} className="w-full h-64 object-cover" />
+                <div  className="relative overflow-x-hidden ">
+                    <img src={imageUrl} alt={title} className="w-full relative left-1/2 object-cover" />
                     <div className="absolute top-4 left-4">
                         <h2 className={`${titleColor} text-2xl font-semibold`}>{title}</h2>
                         <p className={`${descriptionColor} opacity-75`}>{description}</p>
                     </div>
                 </div>
-                <div className="p-4 bg-white">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                <div className="p-4">
                 </div>
             </motion.div>
             {state && (
