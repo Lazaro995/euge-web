@@ -1,0 +1,7 @@
+export const DietSection = () => {
+  return (
+    <section className='px-12'>
+      <header className='text-massive font-display font-bold'> Compará tus resultados </header>
+    </section>
+  )
+}

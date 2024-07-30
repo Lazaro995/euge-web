@@ -1,10 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay, EffectFade } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+import { CarouselItem } from './carousel/item';
 
 const images = [
   'imagen1.jpeg',
@@ -15,24 +15,28 @@ const images = [
 const Carousel: React.FC = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Autoplay]}
-      spaceBetween={30}
+      modules={[Autoplay, EffectFade]}
+      spaceBetween={0}
       slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      autoplay={{ delay: 3000 }}
-      loop = {true}
+      effect="fade"
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      loop={true}
+      speed={1000}
       className="mt-4"
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>
           <motion.div
-            className="w-full rounded-lg overflow-hidden shadow-lg"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <img src={image} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+            <CarouselItem/>  
+            <div className='px-12 py-4 bg-yellow-500 absolute left-[50%]'>EMPEZAR</div>
           </motion.div>
         </SwiperSlide>
       ))}

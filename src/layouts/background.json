@@ -1,0 +1,20 @@
+{
+  "fps": 40,
+  "tails": 80,
+  "animate": true,
+  "scrollAnimate": true,
+  "colors": [
+    "#426b00",
+    "#2a4a00",
+    "#1c3300",
+    "#000000"
+  ],
+  "pattern": {
+    "image": "https://cdn.dribbble.com/users/356907/screenshots/3335188/media/77db7ac29a6be7fa95bb5b9fe3ee5cb0.png",
+    "background": "#000",
+    "blur": 12.5,
+    "size": "670px",
+    "opacity": 0.1,
+    "mask": false
+  }
+}

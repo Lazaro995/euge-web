@@ -1,0 +1,18 @@
+{
+  "fps": 40,
+  "tails": 30,
+  "animate": true,
+  "scrollAnimate": true,
+  "colors": [
+    "#FFD700",
+    "#FFC300",
+    "#FFA500",
+    "#FF8C00"
+  ],
+  "pattern": {
+    "blur": 12.5,
+    "size": "670px",
+    "opacity": 0.3,
+    "mask": false
+  }
+}
