@@ -4,7 +4,6 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import { CircleBackground } from './carousel/circle-action';
 import { CarouselItem } from './carousel/item';
 
 const images = [
@@ -37,6 +36,7 @@ const Carousel: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <CarouselItem/>  
+            <div className='px-12 py-4 bg-yellow-500 absolute left-[50%]'>EMPEZAR</div>
           </motion.div>
         </SwiperSlide>
       ))}

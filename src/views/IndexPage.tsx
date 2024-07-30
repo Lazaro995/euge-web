@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import Carousel from '../components/Carousel';
 import { getYouTubeId } from '../utils';
 import { Testimonials } from '../components/testimonials';
+import { TrailerSection } from '../components/trailer';
+import { DietSection } from '../components/diet';
+import { ContactSection } from '../components/contact';
 
 const IndexPage: React.FC = () => {
   const [isTrainerActive, setIsTrainerActive] = useState(false);
@@ -27,7 +30,7 @@ const IndexPage: React.FC = () => {
       <section id="home" className="pt-16">
         <Carousel />
       </section>
-      <article className=' fixed bottom-32 overflow-visible left-32 w-[600px]'>
+      <article className='absolute top-[16%] overflow-visible left-24 w-[600px]'>
         <Testimonials />
       </article>
       {isTrainerActive && (
@@ -44,6 +47,11 @@ const IndexPage: React.FC = () => {
           />
         </motion.div>
       )}
+      <section className='py-96'>
+        <TrailerSection />
+        <DietSection />
+        <ContactSection />
+      </section>
     </main>
   );
 };
