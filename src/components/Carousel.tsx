@@ -1,10 +1,11 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay, EffectFade } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+import { CircleBackground } from './carousel/circle-action';
+import { CarouselItem } from './carousel/item';
 
 const images = [
   'imagen1.jpeg',
@@ -15,18 +16,28 @@ const images = [
 const Carousel: React.FC = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Autoplay]}
-      spaceBetween={30}
+      modules={[Autoplay, EffectFade]}
+      spaceBetween={0}
       slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      autoplay={{ delay: 3000 }}
-      loop = {true}
+      effect="fade"
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      loop={true}
+      speed={1000}
       className="mt-4"
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>
-            <div>hola</div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <CarouselItem/>  
+          </motion.div>
         </SwiperSlide>
       ))}
     </Swiper>

@@ -7,7 +7,7 @@ import backgroundConfig from './background.json';
 
 const Layout: React.FC = () => {
     return (
-        <div className="text-white px-6 lg:px-12 min-h-screen flex flex-col">
+        <div className="text-white min-h-screen flex flex-col">
           <TWallpaper options={backgroundConfig} />
           <Header />
           <main className="flex-grow">

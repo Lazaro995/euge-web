@@ -1,3 +1,19 @@
+/* Bebas Neue - solo tiene un peso */
+@import '@fontsource/bebas-neue';
+
+/* Roboto - diferentes pesos y estilos */
+@import '@fontsource/roboto/100.css';
+@import '@fontsource/roboto/100-italic.css';
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/300-italic.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/400-italic.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/500-italic.css';
+@import '@fontsource/roboto/700.css';
+@import '@fontsource/roboto/700-italic.css';
+@import '@fontsource/roboto/900.css';
+@import '@fontsource/roboto/900-italic.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +26,7 @@
     --button-gradient-start: #a8ff0a; /* Gradiente de botón verde */
     --button-gradient-end: #a8ff0a; /* Gradiente de botón verde */
     --nav-bg-opacity: 0.95; /* Opacidad del fondo del navbar */
+    font-family: Roboto, systm-ui, sans-serif;
 }
 
 .bg-primary {

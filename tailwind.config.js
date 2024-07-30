@@ -25,7 +25,15 @@ export default {
         shadowColor3: 'rgba(168, 255, 10, 0.1)',  // Color de sombra 3
         shadowColor4: 'rgba(168, 255, 10, 0.06)', // Color de sombra 4
         shadowColor5: 'rgba(168, 255, 10, 0.09)', // Color de sombra 5
-      }
+      },
+      fontFamily: {
+        'sans': ['Roboto', 'sans-serif'],
+        'display': ['Bebas Neue', 'sans-serif'],
+      },
+      fontSize: {
+        massive: 124,
+      },
+
     },
   },
   plugins: [],

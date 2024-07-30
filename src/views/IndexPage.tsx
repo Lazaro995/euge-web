@@ -1,41 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Carousel from '../components/Carousel';
-import YouTubePlayer from '../components/YoutubePlayer';
 import { getYouTubeId } from '../utils';
+import { Testimonials } from '../components/testimonials';
 
 const IndexPage: React.FC = () => {
+  const [isTrainerActive, setIsTrainerActive] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsTrainerActive(true);
+    }, 2000); // 2 segundos
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const youtubeLinks = [
     'https://www.youtube.com/watch?v=ddj9qUJUAoA&t=1456s',
     'https://www.youtube.com/watch?v=iMvADI6vwzA&t=1253s',
     'https://www.youtube.com/watch?v=iMvADI6vwzA&t=1253s',
   ];
-
   const videoIds = youtubeLinks.map(link => getYouTubeId(link)).filter(id => id !== null) as string[];
 
   return (
-    <main className='py-12'>
+    <main className='py-12 relative'>
       <section id="home" className="pt-16">
-          <Carousel />
+        <Carousel />
       </section>
-      <section id="youtube" className="py-10">
-        <div className="container mx-auto">
-          <motion.h2
-            className="text-2xl font-bold text-highlight mb-4"
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            YouTube Videos
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {videoIds.map((link, index) => (
-              <YouTubePlayer key={index} videoId={link} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <article className=' fixed bottom-32 overflow-visible left-32 w-[600px]'>
+        <Testimonials />
+      </article>
+      {isTrainerActive && (
+        <motion.div 
+          className='fixed bottom-0 right-16 z-50'
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <img 
+            src='/assets/trainer.png' 
+            className='h-72 cursor-pointer'
+            alt="Trainer"
+          />
+        </motion.div>
+      )}
     </main>
   );
 };
