@@ -1,6 +1,7 @@
 {
   "name": "euge-web",
   "private": true,
+  "homepage": "https://lazaro995.github.io/euge-web",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
