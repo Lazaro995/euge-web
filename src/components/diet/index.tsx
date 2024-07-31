@@ -1,6 +1,11 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
+
+export type ChartContainerProps = {
+  children: ReactNode,
+  title: string
+}
 
 const strengthData = [
   { name: 'Julio', fuerza: 100 },
@@ -22,7 +27,7 @@ const caloriesData = [
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
 
-const ChartContainer = ({ children, title }) => (
+const ChartContainer = ({ children, title } : ChartContainerProps) => (
   <motion.div 
     className="bg-yellow-500/30 rounded-lg shadow-lg py-10 px-6"
     initial={{ opacity: 0, y: 50 }}
@@ -80,7 +85,7 @@ export const DietSection = () => {
               paddingAngle={5}
               dataKey="value"
             >
-              {caloriesData.map((entry, index) => (
+              {caloriesData.map((_, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
               ))}
             </Pie>

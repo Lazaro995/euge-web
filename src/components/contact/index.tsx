@@ -1,8 +1,13 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 import { FaWhatsapp, FaEnvelope, FaInstagram, FaFacebook } from 'react-icons/fa';
 
-const ContactItem = ({ icon, text, link }) => (
+export type ContactItemProps = {
+  icon: ReactNode,
+  text: string,
+  link: string
+}
+const ContactItem = ({ icon, text, link } : ContactItemProps) => (
   <motion.a
     href={link}
     target="_blank"

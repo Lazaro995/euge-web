@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Carousel from '../components/Carousel';
-import { getYouTubeId } from '../utils';
 import { Testimonials } from '../components/testimonials';
 import { TrailerSection } from '../components/trailer';
 import { DietSection } from '../components/diet';
@@ -18,12 +17,12 @@ const IndexPage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const youtubeLinks = [
-    'https://www.youtube.com/watch?v=ddj9qUJUAoA&t=1456s',
-    'https://www.youtube.com/watch?v=iMvADI6vwzA&t=1253s',
-    'https://www.youtube.com/watch?v=iMvADI6vwzA&t=1253s',
-  ];
-  const videoIds = youtubeLinks.map(link => getYouTubeId(link)).filter(id => id !== null) as string[];
+  // const youtubeLinks = [
+  //   'https://www.youtube.com/watch?v=ddj9qUJUAoA&t=1456s',
+  //   'https://www.youtube.com/watch?v=iMvADI6vwzA&t=1253s',
+  //   'https://www.youtube.com/watch?v=iMvADI6vwzA&t=1253s',
+  // ];
+  // const videoIds = youtubeLinks.map(link => getYouTubeId(link)).filter((id): id is string => id !== null);
 
   return (
     <main className='py-12 relative'>

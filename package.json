@@ -13,6 +13,7 @@
     "@fontsource/bebas-neue": "^5.0.20",
     "@fontsource/roboto": "^5.0.13",
     "@twallpaper/react": "^2.1.2",
+    "@vidstack/react": "^0.6.15",
     "axios": "^1.7.2",
     "formik": "^2.4.6",
     "framer-motion": "^11.2.14",

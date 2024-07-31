@@ -27,7 +27,7 @@ const Carousel: React.FC = () => {
       speed={1000}
       className="mt-4"
     >
-      {images.map((image, index) => (
+      {images.map((_, index) => (
         <SwiperSlide key={index}>
           <motion.div
             initial={{ opacity: 0 }}
