@@ -17,18 +17,12 @@ const IndexPage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // const youtubeLinks = [
-  //   'https://www.youtube.com/watch?v=ddj9qUJUAoA&t=1456s',
-  //   'https://www.youtube.com/watch?v=iMvADI6vwzA&t=1253s',
-  //   'https://www.youtube.com/watch?v=iMvADI6vwzA&t=1253s',
-  // ];
-  // const videoIds = youtubeLinks.map(link => getYouTubeId(link)).filter((id): id is string => id !== null);
-
   return (
     <main className='py-12 relative'>
       <section id="home" className="pt-16">
         <Carousel />
       </section>
+
       <article className='absolute top-[16%] overflow-visible left-24 w-[600px]'>
         <Testimonials />
       </article>

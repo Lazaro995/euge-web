@@ -2,6 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { GleamyProvider, Gold } from 'gleamy';
 import { createTextAnimation, letterAnimation } from './animation';
+import { useNavigate } from 'react-router-dom';
 
 const CircleSVG: React.FC = () => (
   <motion.svg
@@ -27,6 +28,7 @@ const CircleSVG: React.FC = () => (
 );
 
 export const CarouselItem: React.FC = () => {
+  const navigate = useNavigate();
   const controls = useAnimation();
 
   const startAnimation = useCallback(async () => {
@@ -43,11 +45,13 @@ export const CarouselItem: React.FC = () => {
   }, [startAnimation]);
 
   return (
+    <div className='w-full relative overflow-visible h-[384px]'>
     <motion.section 
       className='relative flex flex-row w-full px-10 lg:px-16 justify-between h-96 border-b-4 border-gray-500/10 overflow-hidden'
       initial={{ opacity: 0 }}
       animate={controls}
     >
+
       <motion.article className='z-10' variants={createTextAnimation(0.2)} initial="hidden" animate="visible">
         {Array.from("potencia tu").map((letter, index) => (
           <motion.span key={index} variants={letterAnimation} className='uppercase text-massive font-display font-bold text-white'>
@@ -55,6 +59,7 @@ export const CarouselItem: React.FC = () => {
           </motion.span>
         ))}
       </motion.article>
+
       <motion.div 
         className='relative h-96 w-96 left-0 -bottom-32'
         initial={{ y: 100, opacity: 0 }}
@@ -89,5 +94,7 @@ export const CarouselItem: React.FC = () => {
         ))}
       </motion.article>
     </motion.section>
+     <button onClick={()=>navigate('/get-started')} className='py-4 px-16 bg-yellow-500/90 cursor-pointer absolute left-1/2 z-50 bottom-0 rounded-full text-lg'>EMPEZAR YA</button>
+    </div>
   );
 };

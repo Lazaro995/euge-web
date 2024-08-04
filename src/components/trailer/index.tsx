@@ -40,7 +40,6 @@ export const TrailerSection = () => {
       <footer className='text-3xl uppercase font-display'>
         Unite a nuestro team y vas a obtener más de 300 horas en video para que puedas repetir, observar y prácticar.
       </footer>
-
     </div>
   )
 }
