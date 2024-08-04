@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aidenlx/vidstack-react": "^1.10.9-mod.4",
     "@fontsource/bebas-neue": "^5.0.20",
     "@fontsource/roboto": "^5.0.13",
     "@twallpaper/react": "^2.1.2",
-    "@vidstack/react": "^0.6.15",
+    "@vidstack/player": "^0.13.3",
+    "@vidstack/react": "^1.11.30",
     "axios": "^1.7.2",
     "formik": "^2.4.6",
     "framer-motion": "^11.2.14",
@@ -26,6 +28,7 @@
     "react-youtube": "^10.1.0",
     "recharts": "^2.12.7",
     "swiper": "^11.1.4",
+    "vidstack": "^0.6.15",
     "wc-bubble": "^0.1.7",
     "yup": "^1.4.0",
     "zod": "^3.23.8",

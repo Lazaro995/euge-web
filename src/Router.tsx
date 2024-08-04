@@ -5,6 +5,7 @@ import Layout from './layouts/Layout';
 import AboutPage from './views/AboutPage';
 import ContactPage from './views/ContactPage';
 import IndexPage from './views/IndexPage';
+import KakaPage from './views/kakaPage';
 
 const AppRouter: React.FC = () => {
     return (
@@ -16,6 +17,7 @@ const AppRouter: React.FC = () => {
                     <Route path="/" element={<IndexPage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/kaka" element={<KakaPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>
