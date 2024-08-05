@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
-
 const linkList: Array<{ name: string; path: string }> = [
   { name: "Home", path: "/" },
   { name: "About", path: "/About" },
   { name: "Contact", path: "/Contact" }
 ];
-
 const parentVariants = {
   visible: { opacity: 1, y: 0 },
   hidden: { opacity: 0, y: "-4rem" },
@@ -44,7 +42,7 @@ const Header: React.FC = () => {
 
   return (
     <motion.nav
-      className="bg-navBg/30 text-navText py-4 fixed top-4 left-0 right-0 mx-auto px-6 md:px-12 max-w-screen-2xl mx-16 z-10 rounded-xl shadow-lg backdrop-blur-md"
+      className="bg-navBg/30 text-navText py-4 fixed top-4 left-0 right-0 px-6 md:px-12 max-w-screen-2xl mx-16 z-10 rounded-xl shadow-lg backdrop-blur-md"
       style={{
         boxShadow: "var(--shadow-color1) 0px -23px 25px 0px inset, var(--shadow-color2) 0px -36px 30px 0px inset, var(--shadow-color3) 0px -79px 40px 0px inset, var(--shadow-color4) 0px 2px 1px, var(--shadow-color5) 0px 4px 2px, var(--shadow-color5) 0px 8px 4px, var(--shadow-color5) 0px 16px 8px, var(--shadow-color5) 0px 32px 16px"
       }}

@@ -1,0 +1,40 @@
+{
+    "profile": {
+        "name": "Ramiro",
+        "id": 1,
+        "imageUrl": "../../../public/assets/coach.jpg",
+        "followers": 150000
+    },
+    "post": {
+        "title": "Ganancias laterales",
+        "date": "04/08/2024",
+        "short_description": "Aprende los beneficios laterales",
+        "video": {
+            "url": "https://www.youtube.com/watch?v=vGlsI9M4Yvc",
+            "name": "Biceps frontal 2"
+        },
+        "feedback": {
+            "comments": [
+                {
+                    "name": "Juan",
+                    "comment": "Se sintio increible",
+                    "likes": 6
+                }
+            ]
+        }
+    },
+    "related": [
+        {
+            "url": "",
+            "title": "",
+            "likes": 8,
+            "duration": 4600
+        },
+        {
+            "url": "",
+            "title": "",
+            "likes": 10,
+            "duration": 3600
+        }
+    ]
+}
