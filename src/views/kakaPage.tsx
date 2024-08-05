@@ -1,20 +1,26 @@
-import VideoDetails from "../components/video-details/VideoDetails";
-import VideoPlayer from "../components/video-details/VideoPlayer";
-import MockData from "../components/video-details/mock.json";
-import { getYouTubeId } from "../utils";
-const KakaPage = () => {
+// PageWithVideo.tsx
+import React from 'react';
+import VideoDetails from '../components/video-details/VideoDetails';
+import VideoPlayer from '../components/video-details/VideoPlayer';
+import { getYouTubeId } from '../utils';
+import MockData from "../components/video-details/mock.json"
 
+
+const kakaPage: React.FC = () => {
     const handleShare = () => {
-        alert('Video Shared!'); // aca va react/share
+        alert('Video shared!');
     };
+
     const handleLike = () => {
-//aca va el like
-    }
-    const videoId = getYouTubeId(MockData.post.video.url)
+        console.log('Video liked!');
+    };
+
+    const videoId = getYouTubeId(MockData.post.video.url);
+
     return (
-        <div className="relative z-10 p-4 max-w-7xl mx-auto mt-20">
+        <div className="relative p-4 max-w-7xl mx-auto mt-20">
             <div className="flex flex-col lg:flex-row lg:space-x-4">
-                <div className="w-full lg:w-3/5">
+                <div className="w-full lg:w-3/5 mb-4 lg:mb-0">
                     <div className="aspect-w-16 aspect-h-9 mb-4">
                         {videoId && <VideoPlayer videoId={videoId} />}
                     </div>
@@ -34,4 +40,5 @@ const KakaPage = () => {
         </div>
     );
 };
-export default KakaPage;
+
+export default kakaPage;
