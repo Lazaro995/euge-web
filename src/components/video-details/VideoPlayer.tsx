@@ -1,17 +1,27 @@
 // VideoPlayer.tsx
-import { MediaPlayer, MediaProvider } from '@vidstack/react';
+import React from 'react';
+import Plyr from 'plyr-react';
+
 interface VideoPlayerProps {
-    videoId: string;
+  videoId: string;
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoId }) => {
-    const videoSrc = `https://www.youtube.com/embed/${videoId}`;
+  const videoSrc = {
+    type: 'video' as const,
+    sources: [
+      {
+        src: videoId,
+        provider: 'youtube' as const,
+      },
+    ],
+  };
 
-    return (
-        <MediaPlayer title="Sprite Fight" src={videoSrc}>
-            <MediaProvider />
-        </MediaPlayer>
-    );
+  return (
+    <div className="relative" >
+      <Plyr source={videoSrc} />
+    </div>
+  );
 };
 
 export default VideoPlayer;
